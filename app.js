@@ -9,7 +9,6 @@ app.use(logger('dev'))
 app.use(express.urlencoded({extended: true})) // untuk form
 app.use(express.json()) // untuk JSON
 app.use('/public', express.static(path.join(__dirname, 'uploads')))
-app.use('/api/v1', productRouter)
 app.use('/api/v2', productRouterV2)
 app.use((req, res, next) => {
     res.status(404)
